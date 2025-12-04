@@ -144,17 +144,29 @@
         max-width: 60%;
         margin: 1rem;
       }
+
+      .button {
+        width: 70%;
+        font-size: 90%;
+        padding: 0.4rem 0.8rem;
+      }
     }
 
-    @media (max-width: 450px) {
+    @media (max-width: 720px) {
+      &__card-section {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+      }
+
       &__title {
         font-size: 1.5rem;
-        margin: 0.75rem;
+        margin: 0;
       }
 
       &__card {
         width: 100%;
-        margin: 0.75rem 0.5rem;
         padding: 0.75rem;
 
         .title {
@@ -163,6 +175,43 @@
 
         .desc {
           font-size: 0.95rem;
+        }
+
+        .button {
+          font-size: 60%;
+          padding: 0.4rem 0.8rem;
+        }
+      }
+    }
+
+    @media (max-width: 450px) {
+      &__card-section {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+      }
+
+      &__title {
+        font-size: 1.5rem;
+        margin: 0.75rem;
+      }
+
+      &__card {
+        width: 100%;
+        padding: 0.75rem;
+
+        .title {
+          font-size: 1.25rem;
+        }
+
+        .desc {
+          font-size: 0.95rem;
+        }
+
+        .button {
+          font-size: 0.5rem;
+          padding: 0.4rem 0.8rem;
         }
       }
     }
