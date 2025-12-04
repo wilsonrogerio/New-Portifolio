@@ -11,7 +11,7 @@ export class Resumo {
     imgUrl: '/portifolio.png',
     tecName: 'Angular',
     descript: 'Aplicação web desenvolvida com Angular, pagina de portifolio dinamica aplicando os conceitos modernos de Angular.',
-    linkRepository: 'https://github.com/wilsonrogerio/portifoliio'
+    linkRepository: 'https://github.com/wilsonrogerio/Portifolio-Pessoal'
   },
   {
     imgUrl: '/nest-api.png',
