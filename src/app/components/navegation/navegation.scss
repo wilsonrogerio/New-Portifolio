@@ -1,0 +1,143 @@
+@import '../../styles/variaveis.style';
+
+.navegation {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  background-color: initial;
+
+
+  &__image {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: initial;
+
+    img {
+      width: 65%;
+      border-radius: 50%;
+    }
+
+    h3 {
+      margin: 20px;
+      color: rgba(250, 250, 250, 0.9);
+      font-size: 25px;
+      background-color: initial;
+    }
+  }
+
+  &__link {
+    display: flex;
+    width: 100%;
+    height: 250px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: initial;
+
+    a {
+      text-decoration: none;
+      color: rgba(250, 250, 250, 0.9);
+      font-size: 28px;
+      transition: color 0.3s;
+      background-color: initial;
+
+      &:hover {
+        color: #f0340bc7;
+      }
+    }
+
+    .active-page {
+      color: #f0350be5;
+    }
+  }
+
+  @media(max-width : 1235px) {
+    &__image {
+      width: 100%;
+      height: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+
+    &__link {
+      height: auto;
+      gap: 14px;
+
+      a {
+        font-size: 22px;
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__image {
+      width: 100%;
+      height: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+
+    &__link {
+      height: auto;
+      gap: 14px;
+
+      a {
+        font-size: 22px;
+      }
+    }
+  }
+
+  @media (max-width: 870px) {
+    &__image {
+      width: 100%;
+      height: 40%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &__link {
+
+      gap: 14px;
+
+      a {
+        font-size: 22px;
+      }
+    }
+  }
+
+  @media (max-width: 720px) {
+    .navegation {
+      width: 100%;
+      height: initial;
+
+      &__image {
+        display: none;
+      }
+
+      &__link {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        background-color: $bg-dark;
+
+        a {
+          font-size: 18px;
+
+        }
+      }
+
+    }
+  }
+}

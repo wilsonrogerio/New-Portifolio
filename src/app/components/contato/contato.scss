@@ -1,0 +1,80 @@
+@import '../../styles/variaveis.style';
+
+.contato {
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &__content {
+    text-align: center;
+    max-width: 600px;
+    padding: 0 20px;
+
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: $text-primary;
+    }
+
+    p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: $text-secondary;
+    }
+  }
+
+  .btn {
+    padding: 12px 18px;
+    margin: 20px 10px 0 0;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+
+    &.primary {
+      background: $button-color;
+      color: rgba(255, 255, 255, 0.842);
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+    }
+
+    &.outline {
+      border: 1px solid #2b6cb0;
+      color: #2b6cb0;
+      background: transparent;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: $bg-soft;
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  @media (max-width: 900px) {
+    &__content {
+      max-width: 100%;
+      padding: 0 16px;
+    }
+
+    .btn {
+      padding: 10px 14px;
+      margin: 12px 8px 0 0;
+      font-size: 0.95rem;
+    }
+  }
+
+  @media (max-width: 420px) {
+    &__content h2 {
+      font-size: 1.75rem;
+    }
+
+    &__content p {
+      font-size: 1rem;
+    }
+  }
+}

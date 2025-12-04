@@ -1,1 +1,59 @@
 /* You can add global styles to this file, and also import other style files */
+@import './app/styles/variaveis.style';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: $bg-soft ;
+}
+
+body {
+  font-family: 'Science Gothic', sans-serif;
+  font-weight: 300;
+  overflow-x: hidden;
+}
+
+// Exclui elementos da transição de visualização
+.home,
+.nav {
+  view-transition-name: none;
+}
+
+.content {
+
+  view-transition-name: main-layout-swap;
+}
+
+@keyframes slideInFromBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOutToTop {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(-50px);
+
+  }
+}
+
+::view-transition-old(main-layout-swap) {
+  animation: slideOutToTop 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+::view-transition-new(main-layout-swap) {
+  animation: slideInFromBottom 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}

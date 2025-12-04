@@ -11,6 +11,13 @@
 npm-debug.log
 yarn-error.log
 
+# Environment variables (NEVER commit these!)
+.env
+.env.local
+.env.*.local
+.env.prod
+.env.development
+
 # IDEs and editors
 .idea/
 .project
@@ -40,3 +47,17 @@ testem.log
 # System files
 .DS_Store
 Thumbs.db
+
+# OS
+.idea
+*.iml
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+logs/
+*.log
+
+# Dependencies
+package-lock.json
+yarn.lock

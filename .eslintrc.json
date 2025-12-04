@@ -1,0 +1,109 @@
+{
+  "root": true,
+  "ignorePatterns": ["projects/**/*"],
+  "overrides": [
+    {
+      "files": ["*.ts"],
+      "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended"
+      ],
+      "parser": "@typescript-eslint/parser",
+      "parserOptions": {
+        "ecmaVersion": "ES2022",
+        "sourceType": "module",
+        "project": ["tsconfig.json"]
+      },
+      "plugins": ["@typescript-eslint", "security"],
+      "rules": {
+        /* ==================== SECURITY RULES ==================== */
+        
+        /* Detecta eval() - permite code injection */
+        "security/detect-eval-with-expression": "error",
+        
+        /* Detecta innerHTML dinâmico - permite XSS */
+        "security/detect-object-injection": "warn",
+        
+        /* Detecta expressões regulares não-literais */
+        "security/detect-non-literal-regexp": "warn",
+        
+        /* Detecta require() dinâmico */
+        "security/detect-non-literal-require": "warn",
+        
+        /* Detecta funções perigosas */
+        "no-implied-eval": "error",
+        "no-new-func": "error",
+        
+        /* ==================== TYPESCRIPT RULES ==================== */
+        
+        /* Força tipagem explícita */
+        "@typescript-eslint/explicit-member-accessibility": "warn",
+        "@typescript-eslint/explicit-function-return-types": "warn",
+        
+        /* Previne any */
+        "@typescript-eslint/no-explicit-any": "error",
+        
+        /* Força tipos em variáveis declaradas */
+        "@typescript-eslint/no-inferrable-types": "error",
+        
+        /* Evita código não usado */
+        "@typescript-eslint/no-unused-vars": ["error", {
+          "argsIgnorePattern": "^_",
+          "varsIgnorePattern": "^_"
+        }],
+        
+        /* Força tipos em arrays */
+        "@typescript-eslint/array-type": ["error", {"default": "array-simple"}],
+        
+        /* ==================== CODE QUALITY ==================== */
+        
+        /* Sem console.log em produção */
+        "no-console": ["warn", { "allow": ["warn", "error"] }],
+        
+        /* Sem debugger */
+        "no-debugger": "error",
+        
+        /* Sem var - use const/let */
+        "no-var": "error",
+        
+        /* Prefira const sobre let */
+        "prefer-const": "error",
+        
+        /* Sem == (use ===) */
+        "eqeqeq": ["error", "always"],
+        
+        /* Sem ternários aninhados */
+        "no-nested-ternary": "error",
+        
+        /* Sem chamadas a Object.prototype direto */
+        "no-prototype-builtins": "error",
+        
+        /* ==================== BEST PRACTICES ==================== */
+        
+        /* Força return em callback */
+        "array-callback-return": "error",
+        
+        /* Sem else após return/throw */
+        "no-else-after-return": "error",
+        
+        /* Sem parâmetros não usados */
+        "no-unused-params": "off",
+        
+        /* Força documentação de métodos públicos */
+        "@typescript-eslint/require-jsdoc": "off"
+      }
+    },
+    {
+      "files": ["*.html"],
+      "extends": ["plugin:@angular-eslint/template/recommended"],
+      "parser": "@angular-eslint/template-parser",
+      "rules": {
+        /* Evita innerHTML dinâmico */
+        "@angular-eslint/template/no-call-expression": "warn",
+        
+        /* Força data binding seguro */
+        "@angular-eslint/template/no-negated-async": "error"
+      }
+    }
+  ]
+}

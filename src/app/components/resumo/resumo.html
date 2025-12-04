@@ -1,0 +1,31 @@
+<section class="resumo">
+  <div class="resumo__title">
+    <h2>Resumo Sobre mim</h2>
+  </div>
+  <div class="resumo__content">
+    <h3>
+      Aplicação de Conhecimentos
+    </h3>
+    <p>
+      Tenho aplicado meus conhecimentos em projetos reais, desenvolvendo aplicações web responsivas e
+      interativas. Utilizando tecnologias modernas, busco entregar produtos de alta qualidade que atendam às
+      necessidades dos usuários. Usando boas práticas de desenvolvimento, estou sempre em busca de aprimorar minhas
+      habilidades e
+      contribuir para o sucesso dos projetos em que estou envolvido.
+    </p>
+  </div>
+  <section class="resumo__card-section">
+    @if (cards && cards.length) {
+    @for (c of cards; track $index) {
+    <div class="resumo__card">
+      <img class="card--img" src="{{c.imgUrl}}" alt="">
+      <p class="title">{{c.tecName}}</p>
+      <p class="desc">{{c.descript}}</p>
+      <a class="button" href="{{c.linkRepository}}" target="_blank">Repositorio</a>
+    </div>
+
+    }
+    }
+
+  </section>
+</section>

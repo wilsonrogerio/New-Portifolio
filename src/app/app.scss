@@ -1,0 +1,144 @@
+@import './styles/variaveis.style';
+
+.home {
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  .nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 20rem;
+    padding: 20px;
+    height: 100% !important;
+    background: #fff;
+    background-color: #111418 !important;
+    border-right: 1px solid rgba(0, 0, 0, 0.07);
+    -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.065);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.065);
+    z-index: 2;
+    overflow: hidden;
+    overflow-y: auto;
+
+  }
+
+  .content {
+    width: 80%;
+    height: 100dvh;
+    scroll-behavior: smooth;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeOutDown {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    to {
+      opacity: 0;
+      transform: translateY(-40px);
+    }
+  }
+
+  .route-container {
+    width: 100%;
+    height: 100%;
+    animation: fadeInUp 0.7s ease-in-out forwards !important;
+  }
+}
+
+@media(max-width : 1235px) {
+  .home {
+    .nav {
+      position: fixed;
+      width: 18rem;
+      height: 100% !important;
+      padding: 12px;
+      border-right: none;
+      box-shadow: none;
+    }
+
+    .content {
+      width: 65%;
+      height: 100dvh;
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .home {
+    .nav {
+      position: fixed;
+      width: 17rem;
+      height: 100% !important;
+      padding: 12px;
+      border-right: none;
+      box-shadow: none;
+    }
+
+    .content {
+      max-width: 70%;
+      height: 100dvh;
+    }
+  }
+}
+
+@media (max-width: 870px) {
+  .home {
+    .nav {
+      position: fixed;
+      width: 15rem;
+      height: 100% !important;
+      padding: 12px;
+      border-right: none;
+      box-shadow: none;
+    }
+
+    .content {
+      max-width: 70%;
+      height: 100dvh;
+    }
+  }
+}
+
+@media (max-width: 720px) {
+  .home {
+    flex-direction: column;
+
+    .nav {
+      position: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 15% !important;
+      background-color: initial;
+      padding: 0;
+
+    }
+
+    .content {
+      width: 100%;
+      height: 85dvh;
+      padding: 0 8px;
+      margin-top: 15%;
+    }
+  }
+}
