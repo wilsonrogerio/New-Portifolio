@@ -5,7 +5,7 @@
   height: 100dvh;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-around;
 
   .nav {
     position: fixed;
@@ -143,7 +143,7 @@
   }
 }
 
-@media (max-width : 410px) {
+@media (max-width : 414px) {
   .home {
     flex-direction: column;
 
@@ -166,6 +166,30 @@
       height: 79dvh;
       padding: 0 8px;
       margin-top: 15%;
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  .home {
+    .nav {
+      position: fixed;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 10% !important;
+      background-color: initial;
+      padding: 0;
+
+    }
+
+    .content {
+      width: 100%;
+      height: 80dvh;
+      padding: 0 8px;
     }
   }
 }

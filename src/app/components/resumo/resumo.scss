@@ -2,7 +2,6 @@
 
   .resumo {
     width: 100%;
-    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -184,11 +183,15 @@
       }
     }
 
-    @media (max-width: 450px) {
+    @media (max-width: 414px) {
+      .resumo {
+        height: 60dvh;
+      }
+
       &__card-section {
         flex-direction: column;
         align-items: center;
-        width: 100%;
+        width: 100vw;
         gap: 1rem;
       }
 
@@ -210,9 +213,46 @@
         }
 
         .button {
-          font-size: 0.5rem;
+          font-size: 0.7rem;
           padding: 0.4rem 0.8rem;
         }
       }
     }
+
+    @media (max-width: 375px) {
+      .resumo {
+        height: 60dvh;
+      }
+
+      &__card-section {
+        flex-direction: column;
+        align-items: center;
+        width: 100vw;
+        gap: 1rem;
+      }
+
+      &__title {
+        font-size: 1.5rem;
+        margin: 0.75rem;
+      }
+
+      &__card {
+        width: 100%;
+        padding: 0.75rem;
+
+        .title {
+          font-size: 1.25rem;
+        }
+
+        .desc {
+          font-size: 0.95rem;
+        }
+
+        .button {
+          font-size: 0.7rem;
+          padding: 0.4rem 0.8rem;
+        }
+      }
+    }
+
   }
