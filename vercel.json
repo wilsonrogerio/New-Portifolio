@@ -1,0 +1,6 @@
+{
+  "framework": "angular",
+  "outputDirectory": "dist/wilson-portifolio",
+  "cleanUrls": true,
+  "trailingSlash": false
+}
