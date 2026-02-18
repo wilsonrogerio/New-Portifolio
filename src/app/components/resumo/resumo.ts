@@ -36,6 +36,12 @@ export class Resumo {
     tecName: 'Angular + Tailwind CSS',
     descript: 'Um projeto moderno de aplicação web desenvolvido com Angular 20 e Tailwind CSS 4.',
     linkRepository: 'https://github.com/wilsonrogerio/Angular-Tailwind'
+  },
+  {
+    imgUrl: '/reaction-time.png',
+    tecName: 'HTML + JS',
+    descript: 'Um projeto de mini game de teste de reflexo com media de resultados',
+    linkRepository: 'https://reaction-pro-time.vercel.app/'
   }
   ]
 
